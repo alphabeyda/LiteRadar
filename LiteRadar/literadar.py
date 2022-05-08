@@ -245,13 +245,15 @@ class LibRadarLite(object):
         return res
 
 
-if __name__ == '__main__':
-    if len(sys.argv) != 2:
-        print("LiteRadar only takes 1 argument.")
-        print("Usage:")
-        print("    $ python literadar.py example.apk")
-        exit(1)
-    iron_apk_path = sys.argv[1]
-    lrd = LibRadarLite(iron_apk_path)
+# if __name__ == '__main__':
+#     if len(sys.argv) != 2:
+#         print("LiteRadar only takes 1 argument.")
+#         print("Usage:")
+#         print("    $ python literadar.py example.apk")
+#         exit(1)
+#     iron_apk_path = sys.argv[1]
+def start_libradar(apk_path):
+    lrd = LibRadarLite(apk_path)
     res = lrd.compare()
     print(json.dumps(res, indent=4, sort_keys=True))
+    return res
