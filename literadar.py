@@ -255,5 +255,5 @@ class LibRadarLite(object):
 def start_libradar(apk_path):
     lrd = LibRadarLite(apk_path)
     res = lrd.compare()
-    print(json.dumps(res, indent=4, sort_keys=True))
+    # print(json.dumps(res, indent=4, sort_keys=True))
     return res
